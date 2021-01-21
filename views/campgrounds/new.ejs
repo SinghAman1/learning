@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate') %> 
+ <div class="row"> 
+       <h1 class="text-center mb-4">  add new campground  </h1> 
+       <div class="col-md-6 offset-md-3  col-xl-4 offset-xl-4">
+      <form action="/campgrounds" method="post" novalidate class="val-form" enctype= "multipart/form-data"> 
+        <div class="mb-3"> 
+            <label class="form-label" for="a">location</label> 
+         <input  class="form-control"  type="text" id="a" name="campground[location]" required>  
+         <div class="valid-feedback">
+          Looks good!
+        </div>
+       </div> 
+       <div class="mb-3">
+         <label class="form-label" for="b"> title</label>
+         <input  class="form-control mb-3" type="text" name="campground[title]" id="b" required>  
+         <div class="valid-feedback">
+          Looks good!
+        </div>
+       </div>  
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">$</span>
+        <input type="text" class="form-control" name="campground[price]" required placeholder="0.00" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div> 
+      <div class="  mb-3">  
+        <label class="form-label" for="inputGroup">upload images</label> 
+        <input type="file" name="image" multiple class="form-control" id="inputGroup">
+      </div> 
+      <!-- <div class="mb-3"> 
+        <div class="form-file custom-file">
+          <input type="file" class="form-file-input" id="image" name="image" multiple>
+          <label class="form-file-label" for="image">
+              <span class="form-file-text custom-file-label">Choose image(s)...</span>
+              <span class="form-file-button">Browse</span>
+          </label>
+        </div> 
+       </div>   -->
+      <div class="mb-3">
+        <label class="form-label" for="d"> description</label>
+      <textarea  class="form-control mb-3" type="text" name="campground[description]" id="d" required> </textarea> 
+      <div class="valid-feedback">
+        Looks good!
+      </div> 
+      </div>
+         <button class="btn btn-success mb-3">Add this campground</button>
+   </form>  
+   <a class=" btn btn-primary py-0" href="/campgrounds"> all camps</a>
+ </div>
+   
+
+  
